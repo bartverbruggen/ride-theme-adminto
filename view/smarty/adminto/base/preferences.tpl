@@ -1,7 +1,10 @@
 {extends file="base/index"}
 
+{block name="head_title" prepend}{translate key="title.preferences"} - {/block}
+
+{block name="content_title"}{translate key="title.preferences"}{/block}
+
 {block name="content"}
-    <h4 class="page-title">Preferences</h4>
     <div class="card-box">
         {include file="base/helpers/form.prototype"}
 

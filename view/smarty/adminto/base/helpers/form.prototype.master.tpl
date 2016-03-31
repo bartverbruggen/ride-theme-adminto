@@ -264,9 +264,9 @@
     {if $widget}
         {$attributes = $widget->getAttributes()}
         {if isset($attributes.class)}
-            {$attributes.class = "`$attributes.class` btn btn-default"}
+            {$attributes.class = "`$attributes.class` btn btn-primary"}
         {else}
-            {$attributes.class = 'btn btn-default'}
+            {$attributes.class = 'btn btn-primary'}
         {/if}
 
         <button
@@ -590,7 +590,7 @@
                                 </div>
                             </div>
                             <div class="grid--bp-xsm__3 text--right">
-                                <button type="button" class="btn btn--default" data-dismiss="modal">{translate key="button.done"}</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">{translate key="button.done"}</button>
                             </div>
                         </div>
                     </div>
@@ -878,5 +878,19 @@
         </div>
         {/if}
         <hr />
+    </div>
+{/function}
+
+{*
+    Renders the form actions, if a referer is passed, a cancel button will be presented
+*}
+{function name="formActions" referer=null submit="button.save"}
+    <div class="form-group">
+        <div class="col-lg-offset-2 col-lg-10">
+            <button type="submit" class="btn btn-primary btn-bordred">{translate key=$submit}</button>
+            {if $referer}
+                <a href="{$referer}" class="btn btn-link">{translate key="button.cancel"}</a>
+            {/if}
+        </div>
     </div>
 {/function}

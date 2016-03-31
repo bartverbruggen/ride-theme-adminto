@@ -1,15 +1,17 @@
 {function name="taskbarMenuItems" items=null class=null}
+    {$_taskbarIcons = ["content-menu" => "collection-text", "sites-menu" => "collection-item", "themes-menu" => "invert-colors"]}
+
     {foreach from=$items item="item"}
         {if $item === '-'}
-            <li role="presentation" class="dropdown__divider"></li>
+            <li role="presentation" class="divider"></li>
         {elseif is_string($item)}
-            <li role="presentation" class="dropdown__header">{$item}</li>
+            <li role="presentation" class="dropdown-header">{$item}</li>
         {elseif !method_exists($item, 'hasItems')}
             <li><a href="{$item->getUrl()}">{$item->getLabel()}</a></li>
         {elseif $class}
             <li class="{$class}">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    <i class="icon icon--{$item->__toString()|replace:'.':'-'}"></i>
+                    <i class="zmdi zmdi-{$_taskbarIcons[$item->__toString()|replace:'.':'-']}"></i>
                     {$item->getLabel()}
                     {* <i class="icon icon--angle-down"></i> *}
                 </a>
@@ -18,7 +20,7 @@
                 </ul>
             </li>
         {else}
-            <li role="presentation" class="dropdown__header">{$item->getLabel()}</li>
+            <li role="presentation" class="dropdown-header">{$item->getLabel()}</li>
             {call taskbarMenuItems items=$item->getItems()}
         {/if}
     {/foreach}
@@ -64,7 +66,7 @@
         <div class="container">
             {* Logo *}
             <div class="topbar-left">
-                {block name="taskbar_title"}<a class="logo" href="{$app.url.base}">{$title}</a>{/block}
+                {block name="taskbar_title"}<a class="logo" href="{$app.url.base}">Ride <small>{$title}</small></a>{/block}
             </div>
 
             <div class="topbar-right menu-extras">

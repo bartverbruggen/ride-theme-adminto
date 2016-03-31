@@ -8,8 +8,13 @@ File: Menu
   color: #ffffff !important;
   font-size: 32px;
   margin-top: 8px;
-  font-family: 'Rancho', cursive;
+  font-family: 'Leckerli One', cursive;
   float: left;
+}
+.logo small {
+  font-family: 'Roboto', cursive;
+  font-weight: normal;
+  font-size: 50%;
 }
 .logo span span {
   color: #10c469 !important;
@@ -229,15 +234,15 @@ File: Menu
     margin-left: 0;
     margin-right: 10px;
   }
-  #topnav .navigation-menu > li:first-of-type a {
+/*   #topnav .navigation-menu > li:first-of-type a {
     padding-left: 0px;
-  }
-  #topnav .navigation-menu > li:hover a {
+  } */
+  /* #topnav .navigation-menu > li:hover a {
     color: #71b6f9;
   }
   #topnav .navigation-menu > li:hover a i {
     color: #71b6f9;
-  }
+  } */
   #topnav .navigation-menu > li .submenu {
     position: absolute;
     top: 100%;
