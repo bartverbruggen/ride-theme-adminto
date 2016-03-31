@@ -1,0 +1,9 @@
+{
+    "dependencies": [
+        {
+            "interfaces": ["ride\\library\\template\\theme\\Theme", "ride\\library\\cms\\theme\\Theme"],
+            "class": "ride\\web\\cms\\theme\\AdmintoTheme",
+            "id": "adminto"
+        }
+    ]
+}

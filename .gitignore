@@ -1,0 +1,8 @@
+.DS_Store
+*.buildpath
+*.project
+*.settings/*
+*.sublime-project
+*.sublime-workspace
+node_modules
+.sass-cache
