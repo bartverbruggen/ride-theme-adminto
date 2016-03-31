@@ -16,7 +16,7 @@
                     </div>
                 </div>
 
-                {call formActions referer=$referer submit="button.switch"}
+                {call formActions submit="button.switch"}
             </div>
         </form>
     </div>

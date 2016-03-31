@@ -31,8 +31,9 @@
         {$method = "POST"}
     {/if}
     <li>
-        <form action="{$url}" class="navbar__form" role="search" method="{$method}">
-            <input type="text" name="query" class="form__text" placeholder="{translate key="label.search"}" value="{$query|escape}" />
+        <form action="{$url}" role="search" class="navbar-left app-search pull-left hidden-xs" method="{$method}">
+             <input type="text" name="query" placeholder="{translate key="label.search"}" class="form-control" value="{$query|escape}">
+             <a href=""><i class="zmdi zmdi-search"></i></a>
         </form>
     </li>
 {/function}
